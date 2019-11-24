@@ -10,6 +10,7 @@ jacoco {
  reportsDir = file("$buildDir/ReminderJacocoReportDir")
 }
 
+
 jacocoTestReport {
 	reports {
 	 xml.enabled false
