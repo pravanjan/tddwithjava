@@ -26,7 +26,7 @@ jobs:
       - name: Generate Report
         id: xunit-viewer
         uses: AutoModality/action-xunit-viewer@v1
-      - name: The generated report
+      - name: The generated again report
         run: echo "The report is ${{ steps.xunit-viewer.outputs.report-file }}"
       - name: Test
         run: |
