@@ -37,7 +37,7 @@ public class Remindertest_backup {
 	public void createReminderwithallvalidparam() {
 		Reminder reminder = new Reminder("Breakfast", "Health", LocalDateTime.now().plusHours(1));
 		Map<String, Object> responseMap = new ReminderHelper().createReminder(reminder, calsyncMock);
-		assertEquals(responseMap.get("message"), "created Successfully");
+		assertEquals(responseMap.get("message"), "create Successfully");
 	}
 
 	@Test
