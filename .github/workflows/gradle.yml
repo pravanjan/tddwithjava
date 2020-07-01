@@ -27,7 +27,7 @@ jobs:
         if: always()
         uses: nwtgck/actions-netlify@v1.1
         with:
-          publish-dir: "./build/reports/tests"
+          publish-dir: "./build/reports/tests/test"
           production-branch: master
           github-token: ${{ secrets.GITHUB_TOKEN }}
           deploy-message: "Deploy from GitHub Actions"
