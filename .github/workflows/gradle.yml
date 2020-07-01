@@ -26,7 +26,6 @@ jobs:
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.1
         with:
-          if: always()
           publish-dir: "./build/reports/tests"
 
         env:
