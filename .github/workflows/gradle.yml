@@ -23,7 +23,13 @@ jobs:
         run: chmod +x gradlew
       - name: Build with Gradle
         run: ./gradlew test
-      - uses: ashley-taylor/junit-report-annotations-action@master
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v1.1
         with:
-          access-token: ${{ secrets.GITHUB_TOKEN }}
-        if: always()
+          if: always()
+          publish-dir: "./build/reports/tests"
+
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        timeout-minutes: 1
