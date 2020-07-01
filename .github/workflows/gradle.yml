@@ -24,6 +24,7 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew test
       - name: Deploy to Netlify
+        if: always()
         uses: nwtgck/actions-netlify@v1.1
         with:
           publish-dir: "./build/reports/tests"
